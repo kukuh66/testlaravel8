@@ -1,0 +1,11 @@
+kind: compute#urlMap
+name: web-map-http
+defaultUrlRedirect:
+  redirectResponseCode: MOVED_PERMANENTLY_DEFAULT
+  httpsRedirect: True
+tests:
+- description: Test with no query parameters
+  host: larapost.ownjournal.my.id
+  path: /weblara8/public/
+  expectedOutputUrl: https://larapost.ownjournal.my.id/weblara8/public/
+  expectedRedirectResponseCode: 301
